@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi web!</title>
+  <link rel="icon" href="Icono/heartt.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #e5e1dc;
+      margin: 0;
+      font-family: 'Noto Serif', serif;
+      color: #312020;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    .intro {
+      text-align: center;
+      margin: 40px 20px;
+    }
+
+    .intro h2 {
+      font-size: 26px;
+      color: #192f55;
+      margin-bottom: 5px;
+    }
+
+    .intro h1 {
+      font-size: 36px;
+      color: #4a5c6a;
+      margin-top: 0;
+    }
+
+    .intro hr {
+      border: none;
+      height: 2px;
+      background-color: #3c3c3c;
+      width: 60%;
+      border-radius: 5px;
+      margin: 15px auto;
+    }
+
+    .descripcion {
+      max-width: 900px;
+      margin: 0 auto 30px auto;
+      font-size: 16px;
+      line-height: 1.6;
+      padding: 0 20px;
+    }
+
+    table {
+      width: 95%;
+      margin: 0 auto 50px auto;
+      border-collapse: collapse;
+      background-color: #f9f6f3;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #d8ccc5;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f0ece8;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px 0;
+      background-color: #8b8885;
+      color: #f3f3f3;
+      text-align: center;
+      font-size: 14px;
+      border-top: 1px solid #d1ccc7;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      td {
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+      }
+
+      td img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="Tabla.html">Tabla</a>
+    <a href="pinterest.html">Mini Pinterest</a>
+    <a href="playlist.html">Playlist</a>
+  </nav>
+
+  <div class="intro">
+    <hr>
+    <h2>Películas que vi en lo que va del</h2>
+    <h1>— 2025 —</h1>
+    <hr>
+  </div>
+
+  <div class="descripcion">
+    <p>A continuación, se presenta una tabla con información clave sobre diversas películas. En ella, podrás encontrar la portada de cada film, su calificación en estrellas, una breve sinopsis, el año de lanzamiento y los actores principales que formaron parte del elenco. Esta tabla te permitirá explorar y comparar diferentes títulos de manera rápida y sencilla.</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Portada</th>
+        <th>Estrellas</th>
+        <th>Sinopsis</th>
+        <th>Año de release</th>
+        <th>Actores Principales</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="Peliculas/anyonebutyou.jfif" alt="Anyone But You"></td>
+        <td>4/5 ⭐ ⭐ ⭐ ⭐</td>
+        <td>Bea y Ben, antiguos compañeros de universidad cuya atracción inicial se tornó odio, se encuentran en una boda en Australia y fingen ser la pareja perfecta para mantener las apariencias.</td>
+        <td>22 de diciembre de 2023</td>
+        <td>Sydney Sweeney y Glen Powell</td>
+      </tr>
+      <tr>
+        <td><img src="Peliculas/challengers.jpg" alt="Challengers"></td>
+        <td>3/5 ⭐ ⭐ ⭐</td>
+        <td>Tashi, entrenadora de tenis, ha convertido a su esposo Art en una estrella. Cuando atraviesa una mala racha, él se enfrenta a su ex mejor amigo... y ex de Tashi.</td>
+        <td>26 de abril de 2024</td>
+        <td>Zendaya, Josh O'Connor y Mike Fais</td>
+      </tr>
+      <tr>
+        <td><img src="Peliculas/Spiderman.jfif" alt="Spiderman"></td>
+        <td>5/5 ⭐ ⭐ ⭐ ⭐ ⭐</td>
+        <td>La identidad secreta de Peter Parker es revelada. Acude al Doctor Strange para arreglar su vida, pero un error provoca una fractura en el multiverso.</td>
+        <td>15 de diciembre de 2021</td>
+        <td>Tom Holland, Zendaya, Benedict Cumberbatch, Jacob Batalon, Jon Favreau</td>
+      </tr>
+      <tr>
+        <td><img src="Peliculas/theotherzoey.jfif" alt="The Other Zoey"></td>
+        <td>4/5 ⭐ ⭐ ⭐ ⭐</td>
+        <td>Zoey, estudiante sin interés en el amor, ve su vida cambiar cuando un jugador popular sufre amnesia y cree que ella es su novia.</td>
+        <td>20 de octubre de 2023</td>
+        <td>Archie Renaux, Mallori Johnson, Andie MacDowell</td>
+      </tr>
+      <tr>
+        <td><img src="Peliculas/lookbothways.jfif" alt="Look Both Ways"></td>
+        <td>2/5 ⭐ ⭐</td>
+        <td>Una joven universitaria enfrenta dos futuros posibles: uno donde es madre, otro donde persigue su carrera en Los Ángeles.</td>
+        <td>17 de agosto de 2022</td>
+        <td>Lili Reinhart, Luke Wilson, Aisha Dee, David Corenswet, Nia Long</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>
+    <p>Página hecha con <span style="color: #e9c5c1;">🤍</span> por Ana</p>
+    <p>Última actualización: abril 2025</p>
+  </footer>
+</body>
+
+</html>

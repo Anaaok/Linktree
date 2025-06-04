@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi web!</title>
+  <link rel="icon" href="Icono/heartt.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #e5e1dc;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 15px 0;
+      text-align: center;
+      font-family: 'Noto Serif', serif;
+      margin-bottom: 0;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    .playlist-banner {
+      background-color: #F4BA31;
+      color: #000;
+      padding: 5px;
+      font-family: 'Noto Serif', serif;
+      font-size: 16px;
+      font-weight: bold;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      border-radius: 6px;
+    }
+
+    main {
+      margin-top: 0;
+    }
+
+    aside {
+      background-color: #1e1e1e;
+      display: inline-block;
+      width: 15%;
+      height: 700px;
+      vertical-align: top;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    aside li {
+      background-color: #2c2c2c;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, background-color 0.3s;
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    aside li:nth-child(1) { animation-delay: 0.1s; }
+    aside li:nth-child(2) { animation-delay: 0.2s; }
+    aside li:nth-child(3) { animation-delay: 0.3s; }
+    aside li:nth-child(4) { animation-delay: 0.4s; }
+    aside li:nth-child(5) { animation-delay: 0.5s; }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    aside li:hover {
+      background-color: #444;
+      transform: translateY(-3px);
+    }
+
+    aside li a {
+      color: #f1f1f1;
+      text-decoration: none;
+      font-family: 'Noto Serif', serif;
+      font-size: 14px;
+    }
+
+    aside li a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background-color: #4e4e4e;
+      display: inline-block;
+      width: 85%;
+      height: 700px;
+      vertical-align: top;
+      margin: 0;
+      padding: 0;
+    }
+
+    section img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px 0;
+      background-color: #8b8885;
+      color: #f3f3f3;
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Noto Serif', serif;
+      border-top: 1px solid #d1ccc7;
+    }
+
+
+    .phonk-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #F4BA31;
+      color: #000;
+      font-family: 'Noto Serif', serif;
+      font-size: 28px;
+      text-decoration: none;
+      padding: 4px 12px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      z-index: 999;
+    }
+
+    .phonk-button:hover {
+      background-color: #f8cb5b;
+      transform: scale(1.15);
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="Tabla.html">Tabla</a>
+    <a href="pinterest.html">Mini Pinterest</a>
+    <a href="playlist.html">Playlist</a>
+  </nav>
+
+  <div class="playlist-banner"> 🔥 Mi Playlist ! </div>
+
+  <main>
+    <aside>
+      <ul>
+        <li><a href="Playlist1.html">🎧 Chris Travis - Diamonds</a></li>
+        <li><a href="Playlist2.html">🎧 Antxres - Backspace</a></li>
+        <li><a href="Playlist3.html">🎧 Puhf - She was never real</a></li>
+        <li><a href="Playlist4.html">🎧 FWM - Smi.le Remix (feat. alan vuong)</a></li>
+        <li><a href="Playlist5.html">🎧 Sunset - CYREX</a></li>
+      </ul>
+    </aside><!--
+ --><section>
+      <img src="Imagenes/TOKYODRIFT.jpg" alt="Tokyo Drift">
+    </section>
+  </main>
+
+  <footer>
+    <p style="margin: 0;">Página hecha con <span style="color: #e9c5c1;">🤍</span> por Ana</p>
+    <p style="margin: 5px 0 0 0; font-size: 12px; color: #eae6e1;">Última actualización: abril 2025</p>
+  </footer>
+
+
+  <a href="https://music.youtube.com/playlist?list=PLNfKdFdGMsdcWITKZ06Q5PrbxprNEDyzy&si=QWpTZnN9bJluL2sF"
+     target="_blank"
+     class="phonk-button"
+     title="Redireccionando a Playlist de phonk">
+    +
+  </a>
+
+</body>
+
+</html>
