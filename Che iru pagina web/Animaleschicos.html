@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Che Iru Web</title>
+  <link rel="icon" href="icono.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --azul: #76ACF3;
+      --naranja: #F69D54;
+      --naranja-fondo: #ffe8db;
+      --claro: #ffffff;
+      --gris: #f3f3f3;
+      --negro: #222;
+    }
+    body {
+      background-color: var(--naranja-fondo);
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: var(--negro);
+    }
+    nav {
+      background-color: var(--azul);
+      padding: 15px 0;
+      text-align: center;
+      font-family: 'Noto Serif', serif;
+    }
+    nav a {
+      color: var(--gris);
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+    h3, h4, h1 {
+      text-align: center;
+      font-family: 'Noto Serif', serif;
+      color: var(--azul);
+    }
+    h2 {
+      color: var(--negro);
+      background-color: var(--naranja);
+      text-align: center;
+      font-family: 'Noto Serif', serif;
+      padding: 10px;
+    }
+    p {
+      margin: 0 auto;
+      max-width: 850px;
+      line-height: 1.6;
+      font-size: 16px;
+      padding: 10px 20px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px;
+    }
+    .card {
+      background-color: var(--claro);
+      border-radius: 20px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .calendar-icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .calendar-link {
+      text-decoration: none;
+      color: var(--azul);
+    }
+    .calendar-link:hover {
+      color: var(--naranja);
+    }
+    .calendar-link .calendar-icon {
+      position: relative;
+    }
+    .calendar-link .calendar-icon::after {
+      content: "Google Calendar";
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.75);
+      color: white;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .calendar-link:hover .calendar-icon::after {
+      opacity: 1;
+    }
+
+    .care-section {
+      padding: 30px;
+      background-color: #fff2e9;
+    }
+
+    .care-boxes {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .subsection {
+      background-color: #ffffff;
+      border: 2px solid #cccccc;
+      border-radius: 12px;
+      padding: 20px 30px;
+      max-width: 400px;
+      flex: 1 1 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .subsection h3 {
+      color: var(--azul);
+      font-size: 18px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .subsection ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px 0;
+      background-color: var(--azul);
+      color: var(--claro);
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Noto Serif', serif;
+      border-top: 1px solid #d1ccc7;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+      <a href="index.html">Inicio</a>
+      <a href="playlist.html">Playlist</a>
+      <a href="Animaleschicos.html">Animales pequeños</a>
+      <a href="Animalesgrandes.html">Animales grandes</a>
+      <a href="flexprueba.html"> Blog</a>
+  </nav>
+
+  <header style="color: rgb(0, 0, 0); background-color: var(--naranja); text-align: center;">
+    <h2><strong> 📆Calendario completo de vacunación y cuidados para tus mascotas 🐶🐱</strong></h2>
+  </header>
+
+  <main class="content" role="main">
+    <section class="card" aria-labelledby="perros-title">
+      <a href="https://calendar.google.com" target="_blank" class="calendar-link" title="Ir a Google Calendar">
+        <div class="calendar-icon" aria-hidden="true">📅</div>
+      </a>
+      <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?auto=format&fit=crop&w=250&h=250&q=80" alt="Perro feliz" />
+      <h3 id="perros-title">Calendario de Vacunación - Perros</h3>
+      <ul>
+        <li><strong>6-8 semanas:</strong> Moquillo, Parvovirus, Hepatitis</li>
+        <li><strong>10-12 semanas:</strong> Refuerzo de Moquillo y Parvovirus</li>
+        <li><strong>14-16 semanas:</strong> Rabia</li>
+        <li><strong>1 vez al año:</strong> Refuerzo general + Tos de las perreras</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="gatos-title">
+      <a href="https://calendar.google.com" target="_blank" class="calendar-link" title="Ir a Google Calendar">
+        <div class="calendar-icon" aria-hidden="true">📅</div>
+      </a>
+      <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=250&h=250&q=80" alt="Gato adorable" />
+      <h3 id="gatos-title">Calendario de Vacunación - Gatos</h3>
+      <ul>
+        <li><strong>8 semanas:</strong> Panleucopenia, Calicivirus, Rinotraqueítis</li>
+        <li><strong>12 semanas:</strong> Refuerzo de triple felina</li>
+        <li><strong>16 semanas:</strong> Rabia</li>
+        <li><strong>1 vez al año:</strong> Refuerzo general + Leucemia felina (opcional)</li>
+      </ul>
+    </section>
+  </main>
+
+  <section class="care-section" aria-label="Pre y post cuidados para vacunación">
+    <h2>🩺 Pre y Post cuidado para Vacunación</h2>
+    <div class="care-boxes">
+      <div class="subsection">
+        <h3>Antes de Vacunar</h3>
+        <ul>
+          <li>Asegúrate de que tu mascota esté en ayunas 2 horas antes.</li>
+          <li>Evita el ejercicio intenso ese día.</li>
+          <li>Consulta con tu veterinario si tu mascota está enferma o tiene fiebre.</li>
+          <li>Prepara un lugar tranquilo para su descanso posterior.</li>
+        </ul>
+      </div>
+    
+      <div class="subsection">
+        <h3>Después de Vacunar</h3>
+        <ul>
+          <li>Observa posibles reacciones alérgicas durante las primeras 24 horas.</li>
+          <li>No expongas a tu mascota a lugares con mucha gente o animales por 2 días.</li>
+          <li>Ofrece agua fresca y comida ligera si lo acepta.</li>
+          <li>Evita baños o ejercicio intenso por 48 horas.</li>
+          <li>Contacta al veterinario si hay hinchazón, fiebre o letargo prolongado.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h3 style="margin-top: 30px; color: #ffffff;">"La medicina veterinaria es un acto de amor en acción"</h3>
+    <p>Página hecha con <span style="color: hsl(199, 71%, 34%);">🤍</span> amor</p>
+    <p style="font-size: 12px; color: #000000;">Última actualización: abril 2025</p>
+  </footer>
+</body>
+</html>

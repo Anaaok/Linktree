@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cuidado y bienestar de animales grandes en el campo: caballos, vacas, ovejas y cerdos. Planes veterinarios, vacunas y consejos prácticos.">
+  <title>Che Iru Web</title>
+  <link rel="icon" href="icono.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --azul: #76ACF3;
+      --naranja: #F69D54;
+      --naranja-fondo: #ffe8db;
+      --claro: #ffffff;
+      --gris: #f3f3f3;
+      --negro: #222;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--naranja-fondo);
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: var(--negro);
+    }
+
+    nav {
+      background-color: var(--azul);
+      padding: 15px 0;
+      text-align: center;
+      font-family: 'Noto Serif', serif;
+    }
+
+    nav a {
+      color: var(--claro);
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffffff33;
+      color: #fff;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Noto Serif', serif;
+      text-align: center;
+    }
+
+    h2 {
+      background-color: var(--naranja);
+      padding: 10px;
+      color: var(--negro);
+    }
+
+    h3 {
+      color: var(--azul);
+    }
+
+    p {
+      max-width: 850px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-size: 16px;
+      padding: 10px 20px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .icono-circular {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 3px solid white;
+    }
+
+    .fila-imagenes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 30px 0;
+    }
+
+    .fila-imagenes img {
+      width: 280px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .fila-imagenes img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    table {
+      width: 90%;
+      margin: 40px auto;
+      border-collapse: collapse;
+      background-color: var(--claro);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    thead {
+      background-color: var(--azul);
+      color: var(--claro);
+    }
+
+    th, td {
+      padding: 18px;
+      text-align: left;
+      border: 1px solid #ccc;
+      vertical-align: top;
+    }
+
+    td ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    table img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .contenido-relacionado {
+      text-align: center;
+      margin-top: 40px;
+      font-family: 'Noto Serif', serif;
+    }
+
+    .contenido-relacionado ul {
+      list-style-position: inside;
+      display: inline-block;
+      text-align: left;
+      padding: 0;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px 0;
+      background-color: var(--azul);
+      color: var(--claro);
+      text-align: center;
+      font-size: 14px;
+      border-top: 1px solid #d1ccc7;
+    }
+
+    footer h3 {
+      margin: 10px 0;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      td {
+        border-bottom: 1px solid #ccc;
+        padding: 12px;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--azul);
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+
+    #mascota {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 80px;
+      z-index: 9999;
+      animation: flotar 3s ease-in-out infinite;
+      transition: transform 0.3s;
+    }
+
+    #mascota:hover {
+      transform: scale(1.1) rotate(5deg);
+      cursor: pointer;
+    }
+
+    @keyframes flotar {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+      <a href="index.html">Inicio</a>
+      <a href="playlist.html">Playlist</a>
+      <a href="Animaleschicos.html">Animales pequeños</a>
+      <a href="Animalesgrandes.html">Animales grandes</a>
+      <a href="flexprueba.html"> Blog</a>
+  </nav>
+
+  <div class="contenido-relacionado">
+    <h2><strong>🐄 Cuidado y Bienestar de Animales de Campo</strong></h2>
+    <p>También acompañamos a quienes trabajan con animales grandes. El cuidado veterinario en el campo es esencial para la salud, productividad y bienestar de caballos, vacas, cerdos y ovejas.</p>
+
+    <div class="fila-imagenes">
+      <img src="fotos/fotocaballo.jpg" alt="Caballo en el campo">
+      <img src="fotos/fotovaca.jpg" alt="Vaca pastando">
+      <img src="fotos/fotooveja.jpg" alt="Grupo de ovejas">
+      <img src="fotos/fotochanchito.jpg" alt="Chanchitos">
+     </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>🐎 Caballos</th>
+          <th>🐄 Vacunos</th>
+          <th>🐑🐖 Ovejas y Cerdos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <ul>
+              <li>Higiene dental y control de cascos cada 6 meses.</li>
+              <li>Vacunas: Tétanos, Influenza, Encefalomielitis.</li>
+              <li>Desparasitación interna periódica.</li>
+              <li>Ejercicio diario y refugio adecuado.</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Vacunas: Fiebre Aftosa, Brucelosis, Carbunco.</li>
+              <li>Controles reproductivos y sanitarios regulares.</li>
+              <li>Alimentación balanceada y acceso constante a agua limpia.</li>
+              <li>Prevención de enfermedades infecciosas y parasitarias.</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>🐑 Ovejas: Vacunas contra Enterotoxemia y Clostridiosis.</li>
+              <li>🐖 Cerdos: Circovirus, Parvovirus y control ambiental del criadero.</li>
+              <li>Desparasitación y buena higiene del entorno.</li>
+              <li>Monitoreo de peso, conducta y productividad.</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="font-style: italic; margin-top: 20px;">✨ Un campo sano comienza con animales bien cuidados.</p>
+  </div>
+
+  <footer>
+    <h3 style="color: #000000">"La medicina veterinaria es un acto de amor en acción"</h3>
+    <p>Página hecha con <span style="color: hsl(199, 71%, 34%);">🤍</span> amor</p>
+    <p style="font-size: 12px; color: #000000;">Última actualización: abril 2025</p>
+  </footer>
+
+</body>
+</html>

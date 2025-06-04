@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Che Iru Web - Ovejas</title>
+  <link rel="icon" href="icono.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffaf2;
+      color: #333;
+    }
+
+    nav {
+      background-color: #76ACF3;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    main {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      background-color: #F69D54;
+    }
+
+    section {
+      width: 70%;
+    }
+
+    article {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    article h1 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .carousel img {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    article iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    article p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    aside {
+      width: 30%;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    aside img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .perfil h2, .redes h2 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    .redes a img {
+      width: 30px;
+      height: 30px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 30px;
+    }
+
+    footer span {
+      font-size: 18px;
+    }
+
+    .volver-flecha {
+      margin: 20px;
+    }
+
+    .volver-flecha img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s;
+    }
+
+    .volver-flecha img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="playlist.html">Playlist</a></li>
+      <li><a href="Animaleschicos.html">Animales pequeños</a></li>
+      <li><a href="Animalesgrandes.html">Animales grandes</a></li>
+      <li><a href="flexprueba.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <div class="volver-flecha">
+    <a href="flexprueba.html">
+      <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="Volver">
+    </a>
+  </div>
+
+  <main>
+    <section>
+      <article>
+        <h1>Ovejas: Sanidad y Bienestar del Rebaño</h1>
+
+        <div class="carousel">
+          <img src="fotos/ovejarevision.jpg" alt="Veterinario revisando oveja">
+          <img src="fotos/ovejaspasto.jpg" alt="Ovejas pastando">
+          <img src="fotos/ovejastranquilas.jpg" alt="Ovejas descansando">
+        </div>
+
+        <p>Las ovejas son animales sensibles y gregarios, fundamentales para la producción de lana, carne y leche. Su cuidado requiere atención constante y controles veterinarios regulares.</p>
+
+        <p><strong>Plan Sanitario:</strong> vacunación obligatoria contra enterotoxemia, carbunco sintomático, rabia (en zonas endémicas), y control de brucelosis y fiebre aftosa según normativa provincial. Los controles sanitarios deben iniciarse desde corderos.</p>
+
+        <p><strong>Alimentación:</strong> pasturas naturales y suplementación en épocas críticas. El acceso a agua limpia es esencial para la digestión y producción.</p>
+
+        <p><strong>Parasitismo:</strong> las ovejas son muy susceptibles a parásitos gastrointestinales y ectoparásitos como piojos y sarna. Es importante rotar pasturas y aplicar antiparasitarios periódicamente bajo indicación profesional.</p>
+
+        <p><strong>Manejo del estrés:</strong> se debe evitar el hacinamiento, asegurar buena ventilación en corrales y traslados suaves para no comprometer el sistema inmune del animal.</p>
+
+        <iframe src="https://www.youtube.com/embed/I03D4fTDSsA?si=gnl7dEu0H2fG4_Yv" title="Cuidado de ovejas" allowfullscreen></iframe>
+
+        <p>Las ovejas, bien cuidadas, no solo mejoran su producción, sino que viven más tiempo y con mejor calidad de vida. El seguimiento veterinario regular es la mejor inversión en cualquier rebaño.</p>
+      </article>
+    </section>
+
+    <aside>
+      <div class="perfil">
+        <h2>Che iru veterinaria</h2>
+        <img src="icono.png" alt="Logo Che Iru" />
+        <p>Nuestra misión es brindar atención veterinaria integral y de calidad a los animales y sus familias del barrio Miguel Lanús y zonas aledañas, promoviendo el bienestar, la sanidad y una tenencia responsable con compromiso, ética y calidez.</p>
+      </div>
+      <hr />
+      <div class="redes">
+        <h2>Redes</h2>
+        <a href="https://www.google.com/maps/search/-27.429296,+-55.881270" target="_blank">
+          <img src="https://img.icons8.com/color/48/google-maps-new.png" alt="Ubicación">
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=5493765296564&text&type=phone_number&app_absent=0" target="_blank">
+          <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/veterinaria_che_iru/" target="_blank">
+          <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram">
+        </a>
+        <a href="https://m.facebook.com/profile.php?id=100075593636208" target="_blank">
+          <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="Facebook">
+        </a>
+      </div>
+      <hr />
+      <div>
+        <h2>Link a la tienda nube</h2>
+        <p><a href="https://www.123link.com" target="_blank">www.123link.com</a></p>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <h3 style="margin-top: 30px; color: #ffffff;">"La medicina veterinaria es un acto de amor en acción"</h3>
+    <p>Página hecha con <span style="color: hsl(199, 71%, 34%);">🤍</span> amor</p>
+    <p style="font-size: 12px; color: #000000;">Última actualización: abril 2025</p>
+  </footer>
+</body>
+</html>
