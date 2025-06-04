@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linktree</title>
+  <link rel="icon" href="Media used/Rodoyhomero-sinfondo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url("media used/fondo2.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header img {
+      width: 250px;
+      border-radius: 200px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      border-bottom: 3px solid #eebbbb;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #9874D3;
+    }
+
+    .redes {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 20px 0;
+    }
+
+    .redes a img {
+      width: 50px;
+      height: 50px;
+      transition: transform 0.2s;
+    }
+
+    .redes a img:hover {
+      transform: scale(1.1);
+    }
+
+    nav {
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    nav li {
+      margin: 15px 0;
+    }
+
+    nav a {
+      padding: 12px 60px;
+      background-color: #c19090;
+      border-radius: 20px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background-color: #a76e6e;
+      transform: scale(1.05);
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 0;
+      border-bottom: 3px solid #eebbbb;
+      padding-bottom: 4px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="Media used/Foto Mia.jpg" alt="Foto">
+      <h1>-Ana Paula Robledo Farina-</h1>
+      <h2><span id="typewriter" class="typewriter"></span></h2>
+
+      <div class="redes">
+        <a href="https://maps.app.goo.gl/c2yRosNT9SuGsa2CA?g_st=aw" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/447/447031.png" alt="Google Maps">
+        </a>
+        <a href="https://www.tiktok.com/@anapaulita003?_t=ZM-8wbW0o6XYp&_r=1" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/3669/3669950.png" alt="TikTok">
+        </a>
+        <a href="https://www.instagram.com/anap_robledo?igsh=dzA4ZHZycjZ5enlh" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670274.png" alt="Instagram">
+        </a>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="identikit/index.html">Mi proyecto: identikit </a></li>
+        <li><a href="https://www.youtube.com/watch?v=eH-_GMhH-kk&t=3304s">Timer de estudio</a></li>
+        <li><a href="https://www.instagram.com/reel/DGi11h9JIPf/?igsh=MTBybDlyMmoyOTk2Mg==">Video Interesante</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+    const text = "Estudiante de la Licenciatura en Administración de Empresas";
+    const element = document.getElementById("typewriter");
+
+    function typeText() {
+      element.textContent = "";
+      let i = 0;
+      const interval = setInterval(() => {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 30);
+    }
+
+    typeText();
+
+    setInterval(() => {
+      typeText();
+    }, 40000);
+  </script>
+</body>
+</html>
