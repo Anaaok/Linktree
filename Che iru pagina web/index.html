@@ -3,7 +3,7 @@
 <head> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi web!</title>
+  <title>Veterinaria Che Irû</title>
   <link rel="icon" href="icono.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
   }
 
   body {
-    background-color: var(--naranja-fondo);
+    background: linear-gradient(to bottom, #ffe8db, #ffffff);
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -31,16 +31,18 @@
     padding: 15px 0;
     text-align: center;
     font-family: 'Noto Serif', serif;
+    flex-wrap: wrap;
   }
 
   nav a {
     color: var(--gris);
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 10px;
     font-size: 18px;
     padding: 8px 16px;
     border-radius: 8px;
     transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
   }
 
   nav a:hover {
@@ -48,17 +50,19 @@
     color: white;
   }
 
-  h3, h4, h1 {
+  h1, h2, h3, h4 {
     text-align: center;
     font-family: 'Noto Serif', serif;
     color: var(--azul);
   }
 
+  h1 {
+    margin-top: 38px;
+  }
+
   h2 {
     color: var(--negro);
     background-color: var(--naranja);
-    text-align: center;
-    font-family: 'Noto Serif', serif;
     padding: 10px;
   }
 
@@ -68,7 +72,12 @@
     line-height: 1.6;
     font-size: 16px;
     padding: 10px 20px;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
   }
 
   .icono-circular {
@@ -81,23 +90,37 @@
   }
 
   .fila-imagenes {
+    background-color: #ffffff;      
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 850px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    padding: 25px;
+    }
+
+  .fila-imagenes h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contenedor-imagenes {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
-    padding: 20px 0;
     flex-wrap: wrap;
   }
 
-  .fila-imagenes img {
-    width: 250px;
+  .contenedor-imagenes img {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
     height: 250px;
-    border-radius: 0;
     object-fit: cover;
+    border-radius: 10px;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
 
-  .fila-imagenes img:hover {
-    transform: scale(1.12);
+  .contenedor-imagenes img:hover {
+    transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   }
 
@@ -113,14 +136,18 @@
   }
 
   .contenido-relacionado {
+    background-color: #ffffff;      
+    padding: 25px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 850px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     text-align: center;
     font-family: 'Noto Serif', serif;
-    margin-top: 40px;
   }
 
   .contenido-relacionado ul {
     list-style-position: inside;
-    display: inline-block;
     text-align: left;
     padding: 0;
     margin-top: 10px;
@@ -156,10 +183,6 @@
     padding-left: 20px;
   }
 
-  tr:not(:last-child) {
-    border-bottom: 1px solid #ddd;
-  }
-
   table img {
     border-radius: 50%;
     width: 200px;
@@ -170,6 +193,17 @@
   }
 
   @media (max-width: 768px) {
+    nav a {
+      display: block;
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    .contenedor-imagenes img {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
     table, thead, tbody, th, td, tr {
       display: block;
     }
@@ -189,6 +223,11 @@
       display: block;
       margin-bottom: 5px;
       color: var(--azul);
+    }
+
+    .contenido-relacionado {
+      margin: 20px 10px;
+      padding: 20px 15px;
     }
   }
 
@@ -225,25 +264,25 @@
       <a href="Animaleschicos.html">Animales pequeños</a>
       <a href="Animalesgrandes.html">Animales grandes</a>
       <a href="flexprueba.html"> Blog</a>
+      <a href="../linktree/index.html">LinkTree</a>
   </nav>
 
-  <center>
-    <h1>Bienvenido a VETERINARIA CHE IRÛ 🩺</h1>
-  </center>
+  <h1>Bienvenido a VETERINARIA CHE IRÛ 🩺</h1>
 
-    <div style="text-align: center;">
+  <div style="text-align: center;">
     <h3>Te ofrecemos:</h3>
-    <ul style="list-style: none; padding: 0;">
+    <ul>
       <li>Atención Veterinaria 🐕🐈🐄🐑</li>
       <li>Medicamentos 💊💉</li>
       <li>Petshop 🐾🛍️</li>
       <li>Cirugías 🧬👨‍⚕️</li>
       <li>Alimentos balanceados 🐶🍲</li>
+      <li>Delivery 📬📦🚚</li>
     </ul>
   </div>
 
-  <header style="color: rgb(0, 0, 0); background-color: rgb(245, 180, 128); text-align: center;">
-    <h2>-CULTURA ORGANIZATIVA-</h2>
+  <header>
+    <h2>- CULTURA ORGANIZATIVA -</h2>
   </header>
 
   <table>
@@ -256,9 +295,9 @@
     </thead>
     <tbody>
       <tr>
-        <td>Ofrecer una <strong>atención veterinaria</strong> adecuada a los animales y sus familias en el barrio Miguel Lanús y alrededores; además de asumir responsabilidad en el cuidado y sanidad animal.</td>
-        <td>Continuar apostando a la <strong>innovación y capacitación</strong> para seguir ofreciendo una atención veterinaria acorde a las necesidades de cada paciente.</td>
-        <td>
+        <td data-label="Misión">Ofrecer una <strong>atención veterinaria</strong> adecuada a los animales y sus familias en el barrio Miguel Lanús y alrededores; además de asumir responsabilidad en el cuidado y sanidad animal.</td>
+        <td data-label="Visión">Continuar apostando a la <strong>innovación y capacitación</strong> para seguir ofreciendo una atención veterinaria acorde a las necesidades de cada paciente.</td>
+        <td data-label="Valores">
           <ul>
             <li>Ética profesional</li>
             <li>Respeto por el paciente</li>
@@ -273,35 +312,34 @@
     </tbody>
   </table>
 
-  <center>
-    <h1>- Cuidamos a tu mascota -</h1>
-  </center>
-
   <div class="fila-imagenes">
-    <img src="fotos/foto4.jpeg" alt="Imagen de un perrito siendo atendido">
-    <img src="fotos/foto5.jpeg" alt="Imagen de un perrito siendo atendido">
-    <img src="fotos/foto6.jpg" alt="Imagen de un perrito siendo atendido">
+    <h3>🤍 Cuidamos a tu mascota:</h3>
+    <div class="contenedor-imagenes">
+      <img src="fotos/foto4.jpeg" alt="Imagen de un perrito siendo atendido">
+      <img src="fotos/foto5.jpeg" alt="Imagen de un perrito siendo atendido">
+      <img src="fotos/foto6.jpg" alt="Imagen de un perrito siendo atendido">
+    </div>
   </div>
 
-  <div class="contenido-relacionado">
-    <h3>🤍Info Importante:</h3>
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 15px;">
-      <a href="https://www.google.com/maps/search/-27.429296,+-55.881270" target="_blank">
-        <img src="https://img.icons8.com/color/48/google-maps-new.png" alt="Ubicación" width="50" height="50">
+  <div class="contenido-relacionado" style="max-width: 500px;">
+    <h3><strong>🤍 Info Importante:</strong></h3>
+    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; align-items: center; margin: 15px 0;">
+      <a href="https://www.google.com/maps/search/-27.429296,+-55.881270" target="_blank" aria-label="Ubicación">
+        <img src="https://img.icons8.com/color/48/google-maps-new.png" alt="Ubicación" width="40" height="40">
       </a>
-      <a href="https://api.whatsapp.com/send/?phone=5493765296564&text&type=phone_number&app_absent=0" target="_blank">
-        <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp" width="50" height="50">
+      <a href="https://api.whatsapp.com/send/?phone=5493765296564&text&type=phone_number&app_absent=0" target="_blank" aria-label="WhatsApp">
+        <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp" width="40" height="40">
       </a>
-      <a href="https://www.instagram.com/veterinaria_che_iru/" target="_blank">
-        <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" width="50" height="50">
+      <a href="https://www.instagram.com/veterinaria_che_iru/" target="_blank" aria-label="Instagram">
+        <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" width="40" height="40">
       </a>
-      <a href="https://m.facebook.com/profile.php?id=100075593636208" target="_blank">
-        <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="Facebook" width="50" height="50">
+      <a href="https://m.facebook.com/profile.php?id=100075593636208" target="_blank" aria-label="Facebook">
+        <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="Facebook" width="40" height="40">
       </a>
     </div>
-    <div>
-      <a><iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7082.565598896345!2d-55.88127!3d-27.429296!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDI1JzQ1LjUiUyA1NcKwNTInNTIuNiJX!5e0!3m2!1ses-419!2sar!4v1748579168935!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></a>
-      </div>
+    <div style="text-align: center;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7082.565598896345!2d-55.88127!3d-27.429296!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDI1JzQ1LjUiUyA1NcKwNTInNTIuNiJX!5e0!3m2!1ses-419!2sar!4v1748579168935!5m2!1ses-419!2sar" width="100%" height="250" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
 
   <img id="mascota" src="perrito.png" alt="Mascota animada">
@@ -311,6 +349,5 @@
     <p>Página hecha con <span style="color: hsl(199, 71%, 34%);">🤍</span> amor</p>
     <p style="font-size: 12px; color: #000000;">Última actualización: abril 2025</p>
   </footer>
-
 </body>
 </html>

@@ -30,12 +30,12 @@
       color: var(--negro);
     }
 
-  nav {
-    background-color: var(--azul);
-    padding: 15px;
-    text-align: center;
-    font-family: 'Noto Serif', serif;
-  }
+    nav {
+      background-color: var(--azul);
+      padding: 15px;
+      text-align: center;
+      font-family: 'Noto Serif', serif;
+    }
 
     nav ul {
       list-style: none;
@@ -45,20 +45,41 @@
       flex-wrap: wrap;
     }
 
-  nav a {
-    color: var(--gris);
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 18px;
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
-  }
+    nav a {
+      color: var(--gris);
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+    }
 
-  nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-  }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    .volver-flecha img {
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .carousel img {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
 
     main {
       display: flex;
@@ -66,6 +87,7 @@
       padding: 20px;
       gap: 20px;
     }
+
     section {
       width: 100%;
       max-width: 65%;
@@ -112,6 +134,14 @@
       font-weight: bold;
     }
 
+    article iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
     aside {
       width: 100%;
       max-width: 32%;
@@ -139,8 +169,9 @@
       padding: 10px;
       text-align: left;
     }
+
     .redes a img {
-      width: 50x;
+      width: 50px;
       height: 50px;
       margin-top: 10%;
       margin-bottom: 10%;
@@ -181,9 +212,8 @@
   }
 
   nav a {
-    display: block;
     margin: 8px 0;
-    width: 80%;
+    width: 90%;
     text-align: center;
   }
 
@@ -192,33 +222,14 @@
     align-items: center;
   }
 
-  .carousel img {
-    width: 90%;
-    height: auto;
-  }
-
+  .carousel img,
   article img {
     width: 100%;
     height: auto;
   }
 
-  main {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  section,
-  aside {
-    max-width: 100%;
-  }
-
-  .perfil h2,
-  .redes h2 {
-    text-align: center;
-  }
-
-  aside img {
-    max-width: 100%;
+  iframe {
+    height: 250px;
   }
 
   .volver-flecha {
@@ -227,6 +238,11 @@
 
   .volver-flecha img {
     margin: 10px auto;
+  }
+
+  .perfil h2,
+  .redes h2 {
+    text-align: center;
   }
 }
 
@@ -245,45 +261,40 @@
     </ul>
   </nav>
 
+  <div class="volver-flecha">
+    <a href="flexprueba.html">
+      <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="Volver">
+    </a>
+  </div>
+
   <main>
-    <section>
-      <article>
-        <h2>Las vacas</h2>
-        <img src="fotos/fotovaca.jpg" alt="Una vaca en un campo">
-        <p>Plan de vacunación de una vaca.</p>
-        <a href="blogvacas.html">Leer más</a>
-      </article>
+<section> 
+  <article>
+    <h1>Paseos: Tips, Cuidados Veterinarios y Más</h1>
+    <div class="carousel">
+      <img src="fotos/perro_paseando_con-correa.jpg" alt="Paseo de perro">
+      <img src="fotos/perrito.blanco.jpeg" alt="Perrito blanco">
+      <img src="fotos/9_Goldentubby-5b27119743a103003749b2a6.jpg" alt="Paseo perro">
+    </div>
+        <h1>🐕‍🦺Consejos para Pasear a tu Perro </h1>
+         <p>Pasear es una necesidad que cualquier perro tiene todos los días. No olvides que estos animales vivían antes en el medio salvaje y se guiaban por sus instintos. Por eso, hoy en día no pueden llevar una vida sedentaria. No deben quedarse todo el día tumbados en casa. Tienen que salir a hacer sus necesidades y realizar un poco de ejercicio.</p>
+         <p>Para que estos momentos de salida resulten provechosos tanto para ellos como para vos, te dejamos los siguientes consejos:</p>
+         <p>-Tranquilizá a tu mascota antes de salir para evitar que esté ansiosa o demasiado excitada.</p>
+         <p>-Si tira de la correa o se abalanza, detené el paso hasta que se calme. Así aprenderá a controlarse.</p>
+         <p>-Caminá de forma relajada: tu energía se transmite a tu perro. Mantenete alerta, pero tranquilo.</p>
+         <p>-Alterná el paseo con momentos de juego como premio por su buena conducta. Así se divierten y aprenden juntos.</p>
+    <br>
+    <h1>❤️🐾🐶 KIT para Disfutar del Paseo</h1>
+    <p>-🐕‍🦺 Correa siempre a mano, incluso en zonas seguras. Es esencial para evitar accidentes.</p>
+    <p>-💩 Bolsitas para recoger sus necesidades: ¡no las olvides!</p>
+    <p>-🍶 Agua fresca para hidratarlo después del paseo.</p>
+    <p>-📞 Un teléfono para emergencias nunca está de más.</p>
+    <p>-🥰🐶 Prestale atención en todo momento. Tu presencia es lo más importante para él.</p>
+    <img src="fotos/perrito.correa.jpg" alt="Paseo perro">
+  </article>
+</section>
 
-      <article>
-        <h2>Las Ovejas</h2>
-        <img src="fotos/fotooveja.jpg" alt="Una oveja en un campo">
-        <p>Plan de vacunación de una oveja.</p>
-        <a href="blogoveja.html">Leer más</a>
-      </article>
 
-      <article>
-        <h2>Los Chanchos</h2>
-        <img src="fotos/fotochanchito.jpg" alt="Unos chanchitos en un campo">
-        <p>Plan de vacunación de un chancho.</p>
-        <a href="blogchancho.html">Leer más</a>
-      </article>
-
-      <article>
-        <h2>Los Caballos</h2>
-        <img src="fotos/CABALLOCORRIENDO.png" alt="Unos caballito en un campo">
-        <p>Plan de vacunación de un caballo.</p>
-        <a href="bloghorse.html">Leer más</a>
-      </article>
-
-      <article>
-        <h2>Los Paseos</h2>
-        <img src="fotos/perrito.correa.jpg" alt="Un perrito paseando">
-        <p>Tips para aplicar a la hora del paseo.</p>
-        <a href="Paseos.html">Leer más</a>
-      </article>
-
-    </section>
-    
     <aside>
       <div class="perfil">
         <h2>Che iru veterinaria </h2>
@@ -310,27 +321,6 @@
       <div class="perfil">
         <h2>Link a la tienda nube</h2>
         <p><a href="https://www.123link.com" target="_blank">www.123link.com</a></p>
-      </div>
-      <hr>
-      <div class="perfil">
-        <h2>Suscribite para un descuento:</h2>
-        <p>Del 10% en tu proxima compra!</p>
-        <br>
-        <label for="nombre">Nombre:</label>
-        <input type="text">
-        <br>
-        <label for="Email">Email:</label>
-        <input type="email">
-        <br>
-        <label for="Telefono">Teléfono:</label>
-        <input type="number">
-        <br>
-        <label for="checkbox">Acepto a que se me envíen mails con ofertas y promos</label>
-        <br>
-        <label>Si</label>
-        <input type="checkbox"> 
-        <br>
-        <button type="submit">Enviar</button>
       </div>
     </aside>
   </main>

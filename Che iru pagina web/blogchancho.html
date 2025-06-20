@@ -9,6 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --azul: #76ACF3;
+      --naranja: #F69D54;
+      --naranja-fondo: #ffe8db;
+      --claro: #ffffff;
+      --gris: #f3f3f3;
+      --negro: #222;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -17,55 +26,44 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #fffaf2;
-      color: #333;
+      background-color: var(--naranja-fondo);
+      color: var(--negro);
     }
 
     nav {
-      background-color: #76ACF3;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
+      background-color: var(--azul);
+      padding: 15px;
+      text-align: center;
+      font-family: 'Noto Serif', serif;
     }
 
     nav ul {
       list-style: none;
       display: flex;
+      justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
+      padding: 0;
     }
 
     nav a {
+      color: var(--gris);
       text-decoration: none;
-      color: #000;
-      font-weight: 600;
+      font-size: 18px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     nav a:hover {
-      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
     }
 
-    main {
-      display: flex;
-      padding: 20px;
-      gap: 20px;
-      background-color: #F69D54;
-    }
-
-    section {
-      width: 70%;
-    }
-
-    article {
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    article h1 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
+    .volver-flecha img {
+      width: 30px;
+      height: 30px;
+      margin: 10px;
     }
 
     .carousel {
@@ -83,71 +81,145 @@
       border-radius: 8px;
     }
 
-    article iframe {
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    section {
       width: 100%;
-      height: 300px;
-      border: none;
+      max-width: 65%;
+    }
+
+    article {
+      background-color: var(--claro);
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    article h1 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      font-family: 'Noto Serif', serif;
+    }
+
+    .resaltado {
+      color: var(--naranja);
+      font-weight: bold;
+    }
+
+    article img {
+      width: 100%;
+      max-width: 550px;
+      height: auto;
+      object-fit: cover;
       border-radius: 8px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      margin-top: 15px;
     }
 
     article p {
-      margin-bottom: 15px;
-      line-height: 1.6;
+      margin-bottom: 10px;
+      font-family: 'Times New Roman', serif;
+    }
+
+    article a {
+      color: var(--azul);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    article iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin: 20px 0;
     }
 
     aside {
-      width: 30%;
-      background-color: #fff;
+      width: 100%;
+      max-width: 32%;
+      background-color: var(--claro);
       padding: 15px;
       border-radius: 12px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     aside img {
-      max-width: 100%;
+      max-width: 90%;
       border-radius: 8px;
       margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .perfil h2, .redes h2 {
       margin-top: 10px;
       font-size: 1.2rem;
+      font-family: 'Noto Serif', serif;
+      color: var(--negro);
+      background-color: var(--naranja);
+      padding: 10px;
+      text-align: left;
     }
 
     .redes a img {
-      width: 30px;
-      height: 30px;
+      width: 50px;
+      height: 50px;
+      margin-top: 10%;
+      margin-bottom: 10%;
     }
 
     footer {
-      background-color: #333;
-      color: #fff;
+      background-color: var(--azul);
+      color: var(--claro);
       text-align: center;
       padding: 20px 10px;
       margin-top: 30px;
+      font-family: 'Noto Serif', serif;
     }
 
     footer span {
       font-size: 18px;
     }
-    .volver-flecha {
-  margin: 20px;
-}
 
-.volver-flecha img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.2s;
-}
+    footer p:last-child {
+      font-size: 12px;
+      color: #000000;
+    }
 
-.volver-flecha img:hover {
-  transform: scale(1.1);
-}
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-</style>
+      main {
+        flex-direction: column;
+      }
+
+      section, aside {
+        max-width: 100%;
+      }
+
+      article img {
+        width: 100%;
+        height: auto;
+      }
+
+      .carousel img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
-
 <body>
   <nav>
     <ul>
@@ -156,6 +228,7 @@
       <li><a href="Animaleschicos.html">Animales pequeños</a></li>
       <li><a href="Animalesgrandes.html">Animales grandes</a></li>
       <li><a href="flexprueba.html">Blog</a></li>
+      <li><a href="../linktree/index.html">LinkTree</a></li>
     </ul>
   </nav>
 
@@ -185,17 +258,17 @@
 
         <p><strong>Reproducción y manejo:</strong> un buen manejo reproductivo mejora la productividad. Se debe llevar un control estricto del celo y usar técnicas adecuadas de monta o inseminación. También es importante el cuidado de las cerdas gestantes y los lechones recién nacidos.</p>
 
-       <iframe width="100%" height="315" src="https://www.youtube.com/embed/Q6aF4WRDOZc?si=YXV5xBD_McAaD384" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/ROUPWnPt7zw?si=tO2dEAf9TBdfcXW2" title="YouTube video player" allowfullscreen></iframe>
 
-        <p>Un manejo responsable y con seguimiento veterinario asegura la salud del animal, una producción eficiente y la prevención de enfermedades que pueden afectar al ser humano.</p>
+        <p>Un manejo responsable y con seguimiento veterinario asegura la salud del animal, una producción eficiente y la prevención de enfermedades que pueden afectar al ser humano. Cualquier duda no dudes en consultarte con nosotros!</p>
       </article>
     </section>
 
     <aside>
       <div class="perfil">
-        <h2>Che iru veterinaria</h2>
+        <h2>Che iru veterinaria </h2>
         <img src="icono.png" alt="Logo Che Iru">
-        <p>Nuestra misión es brindar atención veterinaria integral y de calidad a los animales y sus familias del barrio Miguel Lanús y zonas aledañas, promoviendo el bienestar, la sanidad y una tenencia responsable con compromiso, ética y calidez.</p>
+        <p style="margin-top: 10%; margin-bottom: 10%;">Nuestra misión es brindar atención veterinaria integral y de calidad a los animales y sus familias del barrio Miguel Lanús y zonas aledañas, promoviendo el bienestar, la sanidad y una tenencia responsable con compromiso, ética y calidez.</p>
       </div>
       <hr>
       <div class="redes">
@@ -214,7 +287,7 @@
         </a>
       </div>
       <hr>
-      <div>
+      <div class="perfil">
         <h2>Link a la tienda nube</h2>
         <p><a href="https://www.123link.com" target="_blank">www.123link.com</a></p>
       </div>
@@ -223,8 +296,8 @@
 
   <footer>
     <h3 style="margin-top: 30px; color: #ffffff;">"La medicina veterinaria es un acto de amor en acción"</h3>
-    <p>Página hecha con <span style="color: hsl(199, 71%, 34%);">🤍</span> amor</p>
-    <p style="font-size: 12px; color: #000000;">Última actualización: abril 2025</p>
+    <p>Página hecha con <span>🤍</span> amor</p>
+    <p>Última actualización: abril 2025</p>
   </footer>
 </body>
 </html>

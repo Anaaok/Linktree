@@ -31,14 +31,28 @@
       font-family: 'Noto Serif', serif;
     }
 
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav li {
+      display: inline;
+    }
+
     nav a {
       color: var(--gris);
       text-decoration: none;
-      margin: 0 20px;
       font-size: 18px;
       padding: 8px 16px;
       border-radius: 8px;
       transition: background-color 0.3s, color 0.3s;
+      display: inline-block;
     }
 
     nav a:hover {
@@ -46,15 +60,18 @@
       color: white;
     }
 
-    h1, h2, h3 {
+    h3, h4, h1 {
       text-align: center;
       font-family: 'Noto Serif', serif;
+      color: var(--azul);
     }
 
     h2 {
       background-color: var(--naranja);
       color: var(--negro);
       padding: 10px;
+      margin-top: 15px;
+      text-align: center;
     }
 
     p {
@@ -112,7 +129,7 @@
     }
 
     .extra-info {
-      background-color: #fff5ec;
+      background-color: #ffffff;
       padding: 25px;
       border-radius: 20px;
       margin: 40px auto;
@@ -150,10 +167,29 @@
     }
 
     @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
       .grid {
         grid-template-columns: 1fr;
       }
+
+      .playlist-container, .extra-info {
+        margin: 20px 10px;
+        padding: 20px;
+      }
+
+      iframe {
+        height: 250px;
+      }
+
+      p {
+        padding: 10px;
+      }
     }
+
     h3 {
       color: var(--azul);
     }
@@ -162,14 +198,21 @@
 <body>
 
   <nav>
-      <a href="index.html">Inicio</a>
-      <a href="playlist.html">Playlist</a>
-      <a href="Animaleschicos.html">Animales pequeños</a>
-      <a href="Animalesgrandes.html">Animales grandes</a>
-      <a href="flexprueba.html"> Blog</a>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="playlist.html">Playlist</a></li>
+      <li><a href="Animaleschicos.html">Animales pequeños</a></li>
+      <li><a href="Animalesgrandes.html">Animales grandes</a></li>
+      <li><a href="flexprueba.html"> Blog</a></li>
+      <li><a href="../linktree/index.html">LinkTree</a></li>
+    </ul>
   </nav>
-   <h2><strong>🎵📻Musica relajante para mascotas:</strong></h2>
-  <p>Sabemos que el bienestar emocional de tu mascota es esencial. Por eso, te recomendamos esta <strong>playlist gratuita de YouTube</strong> para ayudar a tu compañero peludo a relajarse en momentos de estrés, viajes o descanso.</p>
+
+  <h2><strong>🎵📻 Música relajante para mascotas:</strong></h2>
+
+  <ul style="list-style-type: none; text-align: center;">
+    <li>Sabemos que el bienestar emocional de tu mascota es esencial. Por eso, te recomendamos esta <strong>playlist gratuita de YouTube</strong> para ayudar a tu compañero peludo a relajarse en momentos de estrés, viajes o descanso.</li>
+  </ul>
 
   <div class="playlist-container">
     <h3>🐾 Playlist Principal – YouTube</h3>
@@ -197,8 +240,10 @@
 
   <div class="extra-info">
     <div class="section-title">📱 App recomendada</div>
-        <p><strong>Música relajante para gatos</strong> de <strong>Astrologic Media</strong> ofrece melodías antiestrés para perros y gatos, con distintos modos como "Dormir" o "Relajación". ¡Disponible de forma gratuita en Android y iOS!</p>
-    </div>
+    <ul class="extra">
+      <li><strong>Música relajante para gatos</strong> de <strong>Astrologic Media</strong> ofrece melodías antiestrés para perros y gatos, con distintos modos como "Dormir" o "Relajación". ¡Disponible de forma gratuita en Android y iOS!</li>
+    </ul>
+  </div>
 
   <footer>
     <h3 style="margin-top: 30px; color: #ffffff;">"La medicina veterinaria es un acto de amor en acción"</h3>

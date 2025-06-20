@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head> 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cuidado y bienestar de animales grandes en el campo: caballos, vacas, ovejas y cerdos. Planes veterinarios, vacunas y consejos prácticos.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Che Iru Web</title>
-  <link rel="icon" href="icono.png" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="icono.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  
   <style>
     :root {
       --azul: #76ACF3;
@@ -19,13 +19,10 @@
       --negro: #222;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       background-color: var(--naranja-fondo);
       margin: 0;
+      padding: 0;
       font-family: 'Poppins', sans-serif;
       color: var(--negro);
     }
@@ -38,33 +35,33 @@
     }
 
     nav a {
-      color: var(--claro);
+      color: var(--gris);
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 20px;
       font-size: 18px;
-      padding: 10px 18px;
-      border-radius: 10px;
-      transition: 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     nav a:hover {
-      background-color: #ffffff33;
-      color: #fff;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
     }
 
-    h1, h2, h3, h4 {
-      font-family: 'Noto Serif', serif;
+    h1, h3, h4 {
       text-align: center;
+      font-family: 'Noto Serif', serif;
+      color: var(--azul);
     }
 
     h2 {
-      background-color: var(--naranja);
-      padding: 10px;
       color: var(--negro);
-    }
-
-    h3 {
-      color: var(--azul);
+      background-color: var(--naranja);
+      text-align: center;
+      font-family: 'Noto Serif', serif;
+      padding: 10px;
+      margin-top: 15px;
     }
 
     p {
@@ -216,6 +213,65 @@
         transform: translateY(-10px);
       }
     }
+        /* MEDIA QUERIES  */
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav h2 {
+        margin-bottom: 1rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.3rem 0;
+      }
+
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .contenedor-blanco {
+        padding: 1.5rem;
+      }
+
+      .calculadora {
+        width: 100%;
+        max-width: 320px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+      }
+
+      .pantalla {
+        font-size: 1.3rem;
+        height: 45px;
+      }
+
+      .btn {
+        font-size: 1rem;
+        height: 45px;
+      }
+
+      .info, .info-2 {
+        padding: 1rem;
+        font-size: 0.95rem;
+        max-width: 100%;
+      }
+
+      .info img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -226,11 +282,14 @@
       <a href="Animaleschicos.html">Animales pequeños</a>
       <a href="Animalesgrandes.html">Animales grandes</a>
       <a href="flexprueba.html"> Blog</a>
+      <a href="../linktree/index.html">LinkTree</a>
   </nav>
 
   <div class="contenido-relacionado">
     <h2><strong>🐄 Cuidado y Bienestar de Animales de Campo</strong></h2>
-    <p>También acompañamos a quienes trabajan con animales grandes. El cuidado veterinario en el campo es esencial para la salud, productividad y bienestar de caballos, vacas, cerdos y ovejas.</p>
+    <ul style="list-style-type: none; text-align: center;">
+     <li>También acompañamos a quienes trabajan con animales grandes. El cuidado veterinario en el campo es esencial para la salud, productividad y bienestar de caballos, vacas, cerdos y ovejas.</li>
+     </ul>
 
     <div class="fila-imagenes">
       <img src="fotos/fotocaballo.jpg" alt="Caballo en el campo">
@@ -281,7 +340,7 @@
   </div>
 
   <footer>
-    <h3 style="color: #000000">"La medicina veterinaria es un acto de amor en acción"</h3>
+    <h3 style="color: #ffffff">"La medicina veterinaria es un acto de amor en acción"</h3>
     <p>Página hecha con <span style="color: hsl(199, 71%, 34%);">🤍</span> amor</p>
     <p style="font-size: 12px; color: #000000;">Última actualización: abril 2025</p>
   </footer>
